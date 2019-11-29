@@ -1,0 +1,26 @@
+{
+  "development": {
+    "username": "laooo",
+    "password": null,
+    "database": "todo",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "test": {
+    "username": "laooo",
+    "password": null,
+    "database": "todo",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "laooo",
+    "password": null,
+    "database": "todo",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}

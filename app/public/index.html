@@ -1,0 +1,49 @@
+HAHAHAHA
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <title>Todo List</title>
+</head>
+
+<body>
+    <h2>All Todo List</h2>
+    <script>
+        // var User = require('../models/jobs')(sequelize, DataTypes);
+        document.addEventListener('DOMContentLoaded', function() {
+            const renderJobs = (body, jobs) => {
+                const section = document.createElement('section');
+                const domString = `
+                    <p>
+                        <strong>Subject: </strong>${jobs.subject}
+                    </p>
+                    <p>
+                        <strong>Status: </strong>${jobs.status}
+                    </p>
+                `;
+
+                section.innerHTML = domString;
+                body.appendChild(section);
+            };
+
+            const promiseJobs = fetch("/jobs")
+                .then((response) => response.json());
+
+            const body = document.body;
+            // Promise.all(promiseJobs).then(jobs => {
+            //     jobs.forEach((jobs, index) => {
+            //         if(jobs[index]) {
+            //             const aggregatedJobs = {...jobs[index]};
+            //             renderJobs(body,aggregatedJobs);
+            //         }
+            //     })
+            // })
+            // .catch((e) => console.error(e));
+        });
+    </script>
+</body>
+
+</html>
